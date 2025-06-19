@@ -1,6 +1,7 @@
 # puzanov-bee
 
 Приложение на React, созданное с помощью Create React App.
+https://danielfilinski.github.io/Puzanov-Bee-Garden
 
 ## Скрипты
 
