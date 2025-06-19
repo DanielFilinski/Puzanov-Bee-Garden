@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
 const products = [
@@ -22,13 +22,62 @@ const products = [
   }
 ];
 
+function useScrollAnimation() {
+  useEffect(() => {
+    const elements = document.querySelectorAll('[data-animate]');
+    const observer = new window.IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    elements.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+}
+
 function App() {
+  useScrollAnimation();
   return (
     <div className="landing-root">
       <header className="hero">
-        <h1>Пасека Пузанова</h1>
+        <div className="hero-flex">
+          <h1>Пасека Пузанова</h1>
+          <div className="hero-phone">
+            {/* <div className="hero-phone-label">Телефон</div> */}
+            <a href="tel:+79991234567">+375 (29) 123-45-67</a>
+          </div>
+        </div>
         <p>Натуральный мёд, пыльца и пчелиные матки напрямую от пчеловода</p>
       </header>
+      <section className="about" data-animate>
+        <h2>О нас</h2>
+        <p>Пасека Пузанова — семейное дело с 1985 года. Мы любим пчёл и заботимся о качестве каждого продукта.</p>
+      </section>
+      <hr className="section-divider" />
+      <section className="benefits" data-animate>
+        <h2>Почему мы?</h2>
+        <div className="benefit-list">
+          <div className="benefit-item">
+            <span role="img" aria-label="eco">🌱</span>
+            <p>Экологически чисто</p>
+          </div>
+          <div className="benefit-item">
+            <span role="img" aria-label="family">👨‍👩‍👧‍👦</span>
+            <p>Семейная пасека</p>
+          </div>
+          <div className="benefit-item">
+            <span role="img" aria-label="star">⭐</span>
+            <p>Гарантия качества</p>
+          </div>
+        </div>
+      </section>
+      <hr className="section-divider" />
       <section className="products">
         <h2>Наши продукты</h2>
         <div className="product-list">
@@ -42,6 +91,21 @@ function App() {
           ))}
         </div>
       </section>
+      <hr className="section-divider" />
+      <section className="reviews" data-animate>
+        <h2>Отзывы</h2>
+        <div className="review-list">
+          <div className="review-item">
+            <p>"Лучший мёд, что я пробовал!"</p>
+            <span>— Иван, Минск</span>
+          </div>
+          <div className="review-item">
+            <p>"Пыльца помогла восстановить силы после болезни."</p>
+            <span>— Ольга, Гомель</span>
+          </div>
+        </div>
+      </section>
+     
       <section className="contacts">
         <h2>Контакты</h2>
         <div className="contact-list">
