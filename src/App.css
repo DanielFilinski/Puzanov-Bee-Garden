@@ -92,7 +92,7 @@ body {
 }
 .product-list {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 32px;
   justify-content: center;
 }
@@ -101,7 +101,7 @@ body {
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 #ffb30033;
   padding: 36px 28px 28px 28px;
-  width: 370px;
+  /* width: 370px; */
   min-height: 440px;
   display: flex;
   flex-direction: column;
@@ -206,6 +206,8 @@ body {
 .about, .benefits, .reviews {
   background: rgba(255,255,255,0.85);
   margin: 32px auto;
+  justify-content: center;
+  align-items: center;
   padding: 32px 24px;
   border-radius: 18px;
   max-width: 1000px;
@@ -223,7 +225,8 @@ body {
   gap: 32px;
   justify-content: center;
   margin-top: 24px;
-  flex-wrap: wrap;
+  padding: 10px;
+  /* flex-wrap: wrap; */
 }
 .benefit-item {
   display: flex;
@@ -234,7 +237,7 @@ body {
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
   padding: 32px 20px 24px 20px;
   margin: 0 16px;
-  min-width: 180px;
+  min-width: 160px;
   transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
   cursor: pointer;
   opacity: 0;
