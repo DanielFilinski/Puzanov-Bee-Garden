@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Puzanov-Bee-Garden/static/css/main.17b34f38.css",
+    "main.css": "/Puzanov-Bee-Garden/static/css/main.72c65409.css",
     "main.js": "/Puzanov-Bee-Garden/static/js/main.7e1e6d4f.js",
     "static/js/453.97618ef4.chunk.js": "/Puzanov-Bee-Garden/static/js/453.97618ef4.chunk.js",
     "service-worker.js": "/Puzanov-Bee-Garden/service-worker.js",
     "index.html": "/Puzanov-Bee-Garden/index.html",
-    "main.17b34f38.css.map": "/Puzanov-Bee-Garden/static/css/main.17b34f38.css.map",
+    "main.72c65409.css.map": "/Puzanov-Bee-Garden/static/css/main.72c65409.css.map",
     "main.7e1e6d4f.js.map": "/Puzanov-Bee-Garden/static/js/main.7e1e6d4f.js.map",
     "453.97618ef4.chunk.js.map": "/Puzanov-Bee-Garden/static/js/453.97618ef4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.17b34f38.css",
+    "static/css/main.72c65409.css",
     "static/js/main.7e1e6d4f.js"
   ]
 }
